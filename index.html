@@ -98,7 +98,7 @@
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
 
-      fetch("http://localhost:3000/login", {
+      fetch("https://email-template-lhvr.onrender.com/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
@@ -125,7 +125,7 @@
         senderName: document.getElementById("senderName").value,
       };
 
-      fetch("http://localhost:3000/setup", {
+      fetch("https://email-template-lhvr.onrender.com/setup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -142,7 +142,7 @@
       const formData = new FormData();
       formData.append("csv", file);
 
-      fetch("http://localhost:3000/upload", {
+      fetch("https://email-template-lhvr.onrender.com/upload", {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: formData,
@@ -152,7 +152,7 @@
     }
 
     function startCampaign() {
-      fetch("http://localhost:3000/start", {
+      fetch("https://email-template-lhvr.onrender.com/start", {
         headers: { Authorization: `Bearer ${token}` },
       })
         .then(res => res.text())
@@ -160,7 +160,7 @@
     }
 
     function stopCampaign() {
-      fetch("http://localhost:3000/stop", {
+      fetch("https://email-template-lhvr.onrender.com/stop", {
         headers: { Authorization: `Bearer ${token}` },
       })
         .then(res => res.text())
@@ -168,7 +168,7 @@
     }
 
     function getReport() {
-      fetch("http://localhost:3000/report", {
+      fetch("https://email-template-lhvr.onrender.com/report", {
         headers: { Authorization: `Bearer ${token}` },
       })
         .then(res => res.json())
@@ -178,7 +178,7 @@
     }
 
     function checkPort() {
-      fetch("http://localhost:3000/port-check", {
+      fetch("https://email-template-lhvr.onrender.com/port-check", {
         headers: { Authorization: `Bearer ${token}` },
       })
         .then(res => res.text())
